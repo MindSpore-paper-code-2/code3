@@ -1,0 +1,57 @@
+model: 'svt_s'
+params: '{"model": "alt_gvt_small", "num_classes": 1000, "drop_rate": 0.0, "drop_path_rate": 0.0, "device": "cpu:0"}'
+
+#ds_train: '/home/data/large/train'
+#ds_val: '/home/data/large/train'
+batch_size: 16
+num_parallel_workers: 2
+image_size: 224
+interpolation: 'bicubic'
+auto_augment: 'rand-m9-mstd0.5-inc1'
+num_classes: 1000
+switch_prob: 0.5
+
+optimizer: 'adamw'
+beta: [0.9, 0.999]
+eps: 0.00000001
+lr_scheduler: 'cosine_lr'
+start_epoch: 0
+epochs: 300
+warmup_length: 20
+base_lr: 0.0001
+warmup_lr: 0.000001
+min_lr: 0.00001
+accumulation_step: 1
+is_dynamic_loss_scale: 1
+clip_global_norm_value: 5.0
+amp_level: 'O0'
+save_ckpt_every_step: 0
+save_ckpt_every_sec: 1800
+save_ckpt_keep: 20
+
+pynative_mode: 0
+device_target: 'GPU'
+device_id: [0]
+device_num: 1
+drop: 0.0
+drop_path: 0.1
+
+weight_decay: 0.05
+
+reprob: 0.25
+remode: 'pixel'
+recount: 1
+
+mixup: 0.8
+cutmix: 1.0
+cutmix_minmax: [0.5, 0.99]
+mixup_prob: 1.0
+mixup_switch_prob: 0.5
+mixup_mode: 'batch'
+label_smoothing: 0.5
+
+#dir_ckpt: '/home/save/ckpt'
+#dir_best_ckpt: '/home/save/ckpt_best'
+#dir_summary: '/home/save/summary'
+
+seed: 1

@@ -1,0 +1,22 @@
+parameters:
+  reprob:
+    bounds: [0.1, 0.3]
+  switch_prob:
+    bounds: [0.3, 0.6]
+  mixup:
+    bounds: [0.6, 0.9]
+  cutmix:
+    bounds: [0.75, 1.0]
+  mixup_prob:
+    bounds: [0.75, 1.0]
+  mixup_switch_prob:
+    bounds: [0.25, 0.6]
+  label_smoothing:
+    bounds: [0.25, 0.75]
+  base_lr:
+    bounds: [0.00001, 0.001]
+    kind: log
+  batch_size:
+    choice: [8, 16]
+  momentum:
+    bounds: [0.8, 0.99]

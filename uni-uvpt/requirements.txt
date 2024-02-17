@@ -1,0 +1,9 @@
+addict==2.4.0
+cityscapesscripts==2.2.2
+mindspore==2.1.1
+msadapter==0.1.0
+numpy>=1.19.5
+numpy==1.21.6
+Pillo>==9.1.1
+prettytable==0.7.2
+yapf==0.32.0

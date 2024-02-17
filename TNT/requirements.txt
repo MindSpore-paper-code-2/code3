@@ -1,0 +1,9 @@
+mindspore-gpu==1.9.0
+# if the version above is unavailable, use the following link:
+# https://ms-release.obs.cn-north-4.myhuaweicloud.com/1.9.0/MindSpore/gpu/x86_64/cuda-11.1/mindspore_gpu-1.9.0-cp37-cp37m-linux_x86_64.whl
+pyyaml~=6.0
+tqdm~=4.64
+# onnxruntime-gpu==1.13.1
+numpy~=1.21
+pillow~=1.9
+

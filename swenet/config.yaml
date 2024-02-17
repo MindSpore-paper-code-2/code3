@@ -1,0 +1,54 @@
+
+# Builtin Configurations(DO NOT CHANGE THESE CONFIGURATIONS unless you know exactly what you are doing)
+modelArts_mode: False
+is_distributed: False
+device_num: 8
+# Url for modelarts
+data_url: ""
+train_url: ""
+# Path for local
+dataroot: "./dataset/"
+device_target: "Ascend"
+rank: 0
+group_size: 1
+
+# ==============================================================================
+# options
+seed: 0
+epochs: 15
+batch_size: 64
+
+
+pre_trained: False
+checkpoint_path: "./checkpoint/checkpoint-1_5149.ckpt"
+ckpt_save_dir: "./train_parallel0/train_parallel0/train_parallel0/train_parallel0/checkpoint/"
+dataset_sink_mode: False
+
+# optimizer and lr related
+momentum: 0.9
+lr: 0.001
+imageSize: 32
+# loss related
+
+keep_checkpoint_max: 30
+
+#eval
+eval_batch_size: 1024
+save_pred_path: './result'
+eval_url: ""
+checkpoint_url: ""
+
+# export option
+ckpt_file: "./checkpoint/1p-2022-12-8/checkpoint-1_5149.ckpt"
+file_name: "SWEnet"
+file_format: "AIR"
+
+---
+
+# Help description for each configuration
+modelArts_mode: "Whether training on modelarts, default: False"
+data_url: "Url for modelarts"
+train_url: "Url for modelarts"
+data_path: "The location of the input data."
+output_path: "The location of the output file."
+device_target: 'Target device type'
